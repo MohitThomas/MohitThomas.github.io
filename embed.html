@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html dir="ltr">
+   <head>
+      <title>AJAX Standalone Demo</title>
+<script src="https://matimcooac-nr6kbeak9qe0-nt.analytics.ocp.oraclecloud.com/public/dv/v1/embedding//embedding.js" type="application/javascript">
+</script>
+   </head>
+   <body>
+      <h1>AJAX Standalone Demo</h1>
+
+      <div style="position: absolute; width: calc(100% - 40px); height: calc(100% - 
+120px)" >
+         <oracle-dv project-path="/shared/embed/test-embed">
+         </oracle-dv>
+      </div>
+
+<script>
+requirejs(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojcomposite', 'jet-composites/oracle-dv/loader'],function(ko) {
+ko.applyBindings();
+});
+</script>
+<oracle-dv project-path="/@Catalog/shared/FINANCE AND CONTROLLING(FICO)/FICO AR INSIGHTS">
+</oracle-dv>
+   </body
+</html>
