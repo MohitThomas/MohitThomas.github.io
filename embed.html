@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html dir="ltr">
-   <head>
-      <title>AJAX Standalone Demo</title>
-<script src="https://capexoacent-nrmmuunubmdg-nt.analytics.ocp.oraclecloud.com/public/dv/v1/embedding//embedding.js" type="application/javascript">
-</script>
-   </head>
-   <body>
-      <h1>AJAX Standalone Demo</h1>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Embedded Oracle Analytics Workbook Example</title>
+        <script src="https://capexoacent-nrmmuunubmdg-nt.analytics.ocp.oraclecloud.com/public/dv/v1/embedding/standalone/embedding.js" type="application/javascript">
+        </script>
 
-      <div style="position: absolute; width: calc(100% - 40px); height: calc(100% - 
-120px)" >
-         <oracle-dv project-path="/shared/embed/test-embed">
-         </oracle-dv>
-      </div>
-
-<script>
-requirejs(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojcomposite', 'jet-composites/oracle-dv/loader'],function(ko) {
-ko.applyBindings();
-});
-</script>
-<oracle-dv project-path="/@Catalog/shared/DIGITAL MARKETING TECHNOLOGY (DMT)/Customer Survey">
+    </head>
+    <body>
+        <h1>Embedded Oracle Analytics Workbook</h1>
+<div style="position: absolute; width: calc(100% - 40px); height: calc(100% - 120px)">
+    <oracle-dv project-path="/@Catalog/shared/DIGITAL MARKETING TECHNOLOGY (DMT)/Customer Survey">
 </oracle-dv>
-   </body
+</div>
+        <!--
+        Apply Knockout bindings after DV workbook is fully loaded.  This should be executed in a body onload handler or in a <script> tag after the <oracle-dv> tag.
+        -->
+        <script>
+requirejs(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojcomposite', 'jet-composites/oracle-dv/loader'], function(ko) {
+    ko.applyBindings();
+});
+        </script>
+    </body>
 </html>
